@@ -20,6 +20,7 @@ public class SumTwo {
                 if (array[i] + array[j] == target) {
                     return new int[]{i, j};
                 }
+
             }
         }
 

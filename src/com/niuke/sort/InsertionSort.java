@@ -1,6 +1,7 @@
 package com.niuke.sort;
 
 /**
+ * 插入排序
  * @author 西邮陈冠希
  * @date 2019/8/9
  **/
