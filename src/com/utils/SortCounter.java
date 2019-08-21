@@ -14,18 +14,31 @@ public class SortCounter {
      *
      * @param arr
      */
-    public static int[] insertionSort(int[] arr) {
-        if (arr == null || arr.length < 2) {
-            return new int[] {0};
+    private static void quickSort(int[] arr, int L, int R) {
+        if (L < R) {
+            int mid = partition(arr, L, R);
+            quickSort(arr, L, mid - 1);
+            quickSort(arr, mid + 1, R);
         }
+    }
 
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = i - 1; j >= 0 && arr[j] > arr[j + 1]; j--) {
-                swap(arr, j, j + 1);
+    private static int partition(int[] arr, int L, int R) {
+        int i = L;
+        int j = R;
+        int base = arr[i];
+
+        while (i < j) {
+            while (arr[j] > base && i < j) {
+                j--;
             }
+            arr[i] = arr[j];
+            while (arr[i] <= base && i < j) {
+                i++;
+            }
+            arr[j] = arr[i];
         }
-
-        return arr;
+        arr[i] = base;
+        return i;
     }
 
     /**
@@ -129,7 +142,7 @@ public class SortCounter {
         for (int i = 0; i < testTime; i++) {
             int[] arr1 = generateRandomArray(maxSize, maxValue);
             int[] arr2 = copyArray(arr1);
-            insertionSort(arr1);
+            quickSort(arr1, 0, arr1.length - 1);
             comparator(arr2);
             if (!isEqual(arr1, arr2)) {
                 succeed = false;
@@ -140,7 +153,7 @@ public class SortCounter {
 
         int[] arr = generateRandomArray(maxSize, maxValue);
         printArray(arr);
-        insertionSort(arr);
+        quickSort(arr, 0, arr.length - 1);
         printArray(arr);
     }
 }
