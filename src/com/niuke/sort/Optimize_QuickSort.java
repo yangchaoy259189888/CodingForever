@@ -1,10 +1,10 @@
 package com.niuke.sort;
 
 /**
- * 给定一个数组arr，和一个数num，请把小于num的数放在数组的
- * 左边，等于num的数放在数组的中间，大于num的数放在数组的
- * 右边。
- * 要求额外空间复杂度O(1)，时间复杂度O(N)
+ * 随机快排
+ * O（N*logN）
+ *
+ * 空间复杂度：O（logN）
  *
  * @author 西邮陈冠希
  * @date 2019/8/21
@@ -21,6 +21,8 @@ public class Optimize_QuickSort {
 
     private static void quickSort(int[] arr, int L, int R) {
         if (L < R) {
+            //随机产生一个数组中的元素，与R对应元素交换位置，造成一个概率事件，有可能参考基数是中间值
+            swap(arr, (int) (L + Math.random() * (R - L + 1)), R);
             int[] p = partition(arr, L, R);
             quickSort(arr, L, p[0] - 1);
             quickSort(arr, p[1] + 1, R);
