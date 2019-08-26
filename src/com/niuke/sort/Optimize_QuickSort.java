@@ -11,7 +11,7 @@ package com.niuke.sort;
  **/
 public class Optimize_QuickSort {
     public static void main(String[] args) {
-        int[] arr = {7, 1, 3, 4, -8, 7, 9, 2, 3, 2, 22, 6, 4};
+        int[] arr = {15, 9, 7, 8, 20, -1, 4};
         int L = 0;
         int R = arr.length - 1;
 

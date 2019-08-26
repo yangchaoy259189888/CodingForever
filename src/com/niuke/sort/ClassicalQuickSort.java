@@ -7,7 +7,7 @@ package com.niuke.sort;
  **/
 public class ClassicalQuickSort {
     public static void main(String[] args) {
-        int[] arr = {2, 1, 9, 4, 7, 11, 6};
+        int[] arr = {15, 9, 7, 8, 20, -1, 4};
         int L = 0;
         int R = arr.length - 1;
 
