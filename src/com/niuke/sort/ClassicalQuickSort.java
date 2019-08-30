@@ -39,6 +39,10 @@ public class ClassicalQuickSort {
             arr[j] = arr[i];
         }
         arr[i] = base;
+
+        printArr(arr);
+        System.out.println();
+
         return i;
     }
 
