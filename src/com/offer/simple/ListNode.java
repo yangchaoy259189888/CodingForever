@@ -1,4 +1,4 @@
-package com.offer;
+package com.offer.simple;
 
 public class ListNode {
     int val;

@@ -1,4 +1,4 @@
-package com.offer;
+package com.offer.simple;
 
 /**
  * java int 类整数的最大值是 2 的 31 次方 - 1 = 2147483648 - 1 = 2147483647

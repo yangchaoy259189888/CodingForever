@@ -1,4 +1,4 @@
-package com.offer;
+package com.offer.simple;
 
 /**
  * @author 西邮陈冠希

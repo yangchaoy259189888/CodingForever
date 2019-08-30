@@ -1,4 +1,4 @@
-package com.offer;
+package com.offer.simple;
 
 public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

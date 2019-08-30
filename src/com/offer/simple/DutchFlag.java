@@ -1,4 +1,4 @@
-package com.offer;
+package com.offer.simple;
 
 /**
  * 给定一个数组arr，和一个数num，请把小于num的数放在数组的
