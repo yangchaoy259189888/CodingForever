@@ -12,7 +12,7 @@ public class InputStr {
         int n = scanner.nextInt();
         scanner.nextLine();
         String str = scanner.nextLine();
-        String[] s = str.split(" ");
+        String[] s = str.split("\\s+");
         for (int i = 0; i < s.length; i++) {
             int parseInt = Integer.parseInt(s[i]);
             System.out.println(parseInt);
