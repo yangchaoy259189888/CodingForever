@@ -17,13 +17,13 @@ public class RemoveDuplicatesFromSortedArray {
             }
         }
 
-        List<Integer> list = new ArrayList<>(map.keySet());
-        Collections.sort(list);
-        for (int i = 0; i < list.size(); i++) {
-            nums[i] = list.get(i);
-        }
+//        List<Integer> list = new ArrayList<>(map.keySet());
+//        Collections.sort(list);
+//        for (int i = 0; i < list.size(); i++) {
+//            nums[i] = list.get(i);
+//        }
 
-        return list.size();
+        return map.size();
     }
 
     public static void main(String[] args) {
